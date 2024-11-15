@@ -1,0 +1,39 @@
+﻿@model List<MetrosoftSearch.Mvc.Dtos.SearchResultDto>
+
+<h2>Search History</h2>
+
+<form asp-action="History" method="get">
+    <div>
+        <label>Search Phrase</label>
+        <input name="searchPhrase" />
+    </div>
+    <div>
+        <label>URL</label>
+        <input name="url" />
+    </div>
+    <button type="submit">Fetch History</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Search Phrase</th>
+            <th>URL</th>
+            <th>Positions</th>
+            <th>Found</th>
+            <th>Search Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model)
+        {
+            <tr>
+                <td>@result.SearchPhrase</td>
+                <td>@result.Url</td>
+                <td>@result.Positions</td>
+                <td>@(result.IsFound ? "Yes" : "No")</td>
+                <td>@result.SearchDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

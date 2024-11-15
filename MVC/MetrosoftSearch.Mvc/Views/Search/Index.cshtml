@@ -1,0 +1,19 @@
+﻿@model MetrosoftSearch.Mvc.Models.SearchRequest
+<head>
+    <link href="~/css/custom.css" rel="stylesheet" />
+</head>
+<h2 class="search-header">Search for URL Ranking</h2>
+
+<form asp-action="Index" method="post" class="search-form">
+    <div class="input-group">
+        <label for="SearchPhrase">Search Phrase</label>
+        <input asp-for="SearchPhrase" id="SearchPhrase" class="form-input" placeholder="Enter your search phrase" />
+    </div>
+
+    <div class="input-group">
+        <label for="Url">URL</label>
+        <input asp-for="Url" id="Url" class="form-input" placeholder="Enter the URL" />
+    </div>
+
+    <button type="submit" class="submit-button">Search</button>
+</form>

@@ -1,0 +1,6 @@
+@MetrosoftSearch.Api_HostAddress = http://localhost:5009
+
+GET {{MetrosoftSearch.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
